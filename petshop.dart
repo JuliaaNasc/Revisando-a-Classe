@@ -1,25 +1,23 @@
+import 'animal_atendido.dart';
+import 'animal_em_atendimento.dart';
+import 'funcionarios.dart';
+import 'localizacao.dart';
+
 class Petshop {
   Petshop({
-    this.quantidadeDeAnimaisEmAtendimento = 0,
-    this.quantidadeDeAnimaisAtendidos = 0,
     required this.telefone,
     required this.email,
     required this.nomeDaLoja,
-    required this.localizacaoBairro,
-    required this.localizacaoRua,
-    required this.localizacaoNumero,
-    required this.localizacaoCep,
     required this.funcionarios,
+    required this.localizacao,
+    required this.animaisEmAtendimento,
+     required List<AnimalAtendido> AnimalAtendido,
   });
 
-  int quantidadeDeAnimaisEmAtendimento;
-  int quantidadeDeAnimaisAtendidos;
+  List<AnimalEmAtendimento> animaisEmAtendimento;
   String telefone;
   String email;
   String nomeDaLoja;
-  String localizacaoBairro;
-  String localizacaoRua;
-  String localizacaoNumero;
-  String localizacaoCep;
-  List<String> funcionarios;
+  Localizacao localizacao;
+  List<Funcionario> funcionarios;
 }

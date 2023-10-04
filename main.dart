@@ -1,3 +1,7 @@
+import 'animal_atendido.dart';
+import 'animal_em_atendimento.dart';
+import 'funcionarios.dart';
+import 'localizacao.dart';
 import 'petshop.dart';
 
 void main() {
@@ -5,24 +9,54 @@ void main() {
   print(frase);
 
   Petshop petshop = Petshop(
-    quantidadeDeAnimaisEmAtendimento: 10,
-    quantidadeDeAnimaisAtendidos: 8,
+    animaisEmAtendimento: [
+      AnimalEmAtendimento(
+          raca: 'pudol',
+          horario: '13:56',
+          data: '12/09/2023',
+          profissionalDoAtendimento: 'Bruno Azevedo',
+          finalidadeDoAtendimento: 'Tozador',
+          recepcionista: 'Julia Miranda',
+          responsavelDoPet: 'Maria tereza Silva Neves'),
+    ],
     telefone: '8540028922',
     email: 'petshopdajuju@gmail.com',
     nomeDaLoja: 'juju dos dogs',
-    localizacaoBairro: 'Vila Peri',
-    localizacaoRua: 'Manuel Satiro',
-    localizacaoNumero: '2334',
-    localizacaoCep: '20934123',
     funcionarios: [
-      'Ana luiza',
-      'Carolina Araujo',
-      'Julia Miranda',
-      'Paola Oliveiira',
-      'Bruna Tavarez',
-      'Diogo Mesquita',
-      'Loureno Pinto',
+      Funcionario(
+        nomeFuncionario: 'Julia Miranda',
+        cargo: 'recepcionista',
+        idade: 24,
+      ),
+      Funcionario(
+        nomeFuncionario: 'Bruno Azevedo',
+        cargo: 'Tozador',
+        idade: 26,
+      ),
+      Funcionario(
+        nomeFuncionario: 'Bianca Carvalho',
+        cargo: 'Adestrador',
+        idade: 34,
+      ),
+    ],
+    localizacao: Localizacao(
+      bairro: 'Benfica',
+      rua: 'Av. Jose Bastos',
+      numero: '2345',
+      cidade: 'Fortaleza',
+      estado: 'Ceara',
+      cep: '34567546',
+    ),
+    AnimalAtendido: [
+      AnimalAtendido(
+        raca: 'pudol',
+        data: '12/09/2023',
+        profissionalDoAtendimento: 'Bianca Carvalho',
+        finalidade: 'Adestrar',
+        recepcionista: 'Julia Miranda',
+      ),
     ],
   );
+
   print(petshop.funcionarios);
 }
