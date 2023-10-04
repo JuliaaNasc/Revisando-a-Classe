@@ -1,5 +1,6 @@
 import 'animal_atendido.dart';
 import 'animal_em_atendimento.dart';
+import 'contato.dart';
 import 'funcionarios.dart';
 import 'localizacao.dart';
 import 'petshop.dart';
@@ -19,9 +20,15 @@ void main() {
           recepcionista: 'Julia Miranda',
           responsavelDoPet: 'Maria tereza Silva Neves'),
     ],
-    telefone: '8540028922',
-    email: 'petshopdajuju@gmail.com',
-    nomeDaLoja: 'juju dos dogs',
+    contato: [
+      Contato(
+        telefone: '85 9 8786 8980',
+        email: 'petcomamor@gmail.com',
+        site: 'petcomamor.com.br',
+        instagram: 'pet_com_amor',
+        facebook: 'pet com amor',
+      ),
+    ],
     funcionarios: [
       Funcionario(
         nomeFuncionario: 'Julia Miranda',
@@ -46,6 +53,7 @@ void main() {
       cidade: 'Fortaleza',
       estado: 'Ceara',
       cep: '34567546',
+      nomeLoja: 'Petshop Com Amor',
     ),
     AnimalAtendido: [
       AnimalAtendido(

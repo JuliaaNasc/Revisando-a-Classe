@@ -1,14 +1,15 @@
 class Localizacao {
+  Localizacao({
+    required this.bairro,
+    required this.rua,
+    required this.numero,
+    required this.cidade,
+    required this.estado,
+    required this.cep,
+    required this. nomeLoja,
+  });
 
-Localizacao({
-  required this.bairro,
-  required this.rua,
-  required this.numero,
-  required this.cidade,
-  required this.estado,
-  required this.cep,
-});
-
+  String nomeLoja;
   String bairro;
   String rua;
   String numero;
